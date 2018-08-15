@@ -5,11 +5,13 @@ class Computer < Player
     ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
     #first turn choose corner
     #second turn choose other corner
-    #
+    #Win: If you have two in a row, play the third to get three in a row.
+    #Block: If the opponent has two in a row, play the third to block them.
+    #Fork: Create an opportunity where you can win in two ways.
+    #Block Opponent's Fork:
     
     def best_move 
-      board.cells.each do |cell|
-        cell == player.token
+      WIN_COMBINATIONS
   end
 end 
 end
