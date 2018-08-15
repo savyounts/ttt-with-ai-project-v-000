@@ -14,7 +14,7 @@ class Computer < Player
   [2,4,6]
   ]
   def move(board)
-      
+     ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample if win == nil  
   end   
     #first turn choose corner
     #second turn choose other corner
