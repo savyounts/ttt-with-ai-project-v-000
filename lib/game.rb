@@ -23,7 +23,7 @@ class Game
   
   #state of game methods
    def current_player
-    board.turn_count % 2 == 0 ? player_1 : player_2
+    board.turn_count % 2 == 0 ? @player_1 : @player_2
   end 
   
   def won?
@@ -61,8 +61,8 @@ class Game
     end
 
     if input == "0"
-      player_1 = Players::Computer.new("X")
-      player_2 = Players::Computer.new("0")
+      @player_1 = Players::Computer.new("X")
+      @player_2 = Players::Computer.new("0")
     elsif input == "1"
       input_2 = ""
       until input_2 == "1" || input_2 == "2"
@@ -70,16 +70,16 @@ class Game
         input_2 = gets.strip
       end 
       if input_2 == "1"
-        player_1 = Players::Human.new("X")
-        player_2 = Players::Computer.new("O")
+        @player_1 = Players::Human.new("X")
+        @player_2 = Players::Computer.new("O")
       else 
-        player_1 = Players::Human.new("O")
-        player_2 = Players::Computer.new("X")
+        @player_1 = Players::Human.new("O")
+        @player_2 = Players::Computer.new("X")
       end
     elsif input == "2"  
       puts "Player 1 will be 'X'."
-      player_1 = Players::Human.new("X")
-      player_1 = Players::Human.new("0")
+      @player_1 = Players::Human.new("X")
+      @player_1 = Players::Human.new("0")
     end
 
     game = Game.new(player_1, player_2)
