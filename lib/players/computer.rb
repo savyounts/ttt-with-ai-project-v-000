@@ -19,7 +19,7 @@ class Computer < Player
   end 
   
   def move(board)
-    if @board.none? {|c| c == "X" || c == "O"}
+    if @board == @board.reset!
       "5"
      elsif win == nil
       ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
