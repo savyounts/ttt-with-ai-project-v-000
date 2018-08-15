@@ -1,7 +1,7 @@
 class Board 
   attr_accessor :cells
   
-  def initialize
+  def initialize (player_1, player_2)
     reset!
   end
   
