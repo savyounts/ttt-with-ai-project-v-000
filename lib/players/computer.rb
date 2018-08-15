@@ -14,9 +14,6 @@ class Computer < Player
   [0,4,8],
   [2,4,6]
   ]
-  def initialize(board)
-    @board = board
-  end 
   
   def move(board)
     if @board == @board.reset!
