@@ -81,8 +81,6 @@ class Game
       @player_1 = Players::Human.new("X")
       @player_2 = Players::Human.new("0")
     end
-
-    game = Game.new(player_1, player_2)
     game.play 
   end 
   
