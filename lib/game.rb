@@ -29,7 +29,7 @@ class Game
   end 
   
   def draw?
-    @board.full? && !won?
+    !won?  && @board.full?
   end
   
   def over?
