@@ -18,7 +18,7 @@ class Computer < Player
     
   def move(board)
     @board = board
-     if win == W
+     if win == nil
         ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
     end
       
@@ -31,14 +31,13 @@ class Computer < Player
     #Block Opponent's Fork:
     
     def win
-      WIN_COMBINATIONS.each do |combo|
+      WIN_COMBINATIONS.detect do |combo|
         if board.cells[combo[0]] == token && board.cells[combo[0]] == board.cells[combo[1]] 
             combo[2]
         elsif board.cells[combo[0]] == token && board.cells[combo[0]] == board.cells[combo[2]]
             combo[1]
         elsif board.cells[combo[2]] == token && board.cells[combo[2]] == board.cells[combo[1]]
             combo[0]
-        else 
         end
       end
     end 
