@@ -7,7 +7,8 @@ class Computer < Player
     #second turn choose other corner
     
     def best_move 
-      board.cells.
+      board.cells.each do |cell|
+        cell == player.token
   end
 end 
 end
