@@ -20,9 +20,8 @@ class Board
   end 
     
   def position(x)
-    @cells
-    index = x.to_i 
-    index -= 1
+    # index = x.to_i 
+    # index -= 1
     @cells[x.to_i - 1]
   end 
   
