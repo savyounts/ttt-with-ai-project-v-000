@@ -84,6 +84,7 @@ class Game
       puts "Player 1 will be 'X'."
       player_1 = Players::Human.new("X")
       player_1 = Players::Human.new("0")
+       binding.pry
     end
  
     
@@ -113,5 +114,5 @@ class Game
     puts "Current Board:"
     board.display
   end
- binding.pry
+
 end 
