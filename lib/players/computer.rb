@@ -1,3 +1,4 @@
+module Players
 class Players::Computer
   
   def move(board)
