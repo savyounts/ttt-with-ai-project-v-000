@@ -4,7 +4,8 @@ require_relative '../config/environment'
 game = Game.new
 game.start
 
- 
+answer = ""
+ until answer = "no"
  puts "Would you like to play again? Yes or No?"
  answer = gets.strip 
  if answer == "yes"
