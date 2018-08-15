@@ -20,9 +20,10 @@ class Board
   end 
     
   def position(x)
+    @cells
     index = x.to_i 
     index -= 1
-    @cells[index]
+    @cells[x.to_i - 1]
   end 
   
   def update(x, player)
