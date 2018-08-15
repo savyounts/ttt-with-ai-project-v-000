@@ -14,6 +14,11 @@ class Computer < Player
   [0,4,8],
   [2,4,6]
   ]
+  
+  def board=(board=[])
+    @board = board
+  end 
+    
   def move(board)
      ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample if win == nil  
   end   
