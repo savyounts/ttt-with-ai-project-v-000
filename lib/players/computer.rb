@@ -21,10 +21,9 @@ class Computer < Player
        "4"
       else 
         ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
-        binding.pry
       end 
-     
-  end   
+  end  
+  binding.pry
     #first turn choose corner
     #second turn choose other corner
     #Win: If you have two in a row, play the third to get three in a row.
