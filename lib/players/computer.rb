@@ -11,7 +11,8 @@ class Computer < Player
     #Block Opponent's Fork:
     
     def best_move 
-      WIN_COMBINATIONS
+      WIN_COMBINATIONS.each do |combo|
+        
   end
 end 
 end
