@@ -10,9 +10,15 @@ class Computer < Player
     #Fork: Create an opportunity where you can win in two ways.
     #Block Opponent's Fork:
     
-    def best_move 
+    def win  
       WIN_COMBINATIONS.each do |combo|
-        
+        if board.cells[combo[0]] == computer.token && board.cells[combo[0]] == board.cells[combo[1]] 
+            combo[2]
+        elsif board.cells[combo[0]] == computer.token && board.cells[combo[0]] == board.cells[combo[2]]
+            combo[1]
+        elsif board.cells[combo[2]] == computer.token && board.cells[combo[2]] == board.cells[combo[1]]
+            combo[0]
+        end
   end
 end 
 end
