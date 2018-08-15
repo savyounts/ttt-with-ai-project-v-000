@@ -79,7 +79,7 @@ class Game
     elsif input == "2"  
       puts "Player 1 will be 'X'."
       @player_1 = Players::Human.new("X")
-      @player_1 = Players::Human.new("0")
+      @player_2 = Players::Human.new("0")
     end
 
     game = Game.new(player_1, player_2)
