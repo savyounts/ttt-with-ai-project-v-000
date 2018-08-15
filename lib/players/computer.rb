@@ -23,7 +23,7 @@ class Computer < Player
     #Fork: Create an opportunity where you can win in two ways.
     #Block Opponent's Fork:
     
-    def win  
+    def win(board) 
       WIN_COMBINATIONS.each do |combo|
         if board.cells[combo[0]] == token && board.cells[combo[0]] == board.cells[combo[1]] 
             combo[2]
