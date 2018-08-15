@@ -38,6 +38,8 @@ class Computer < Player
             combo[1]
         elsif board.cells[combo[2]] == token && board.cells[combo[2]] == board.cells[combo[1]]
             combo[0]
+        else 
+            nil
         end
       end
     end 
