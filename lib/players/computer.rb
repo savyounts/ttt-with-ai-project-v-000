@@ -20,6 +20,8 @@ class Computer < Player
      case moves 
      when board.turn_count = 0 
        "4"
+      else 
+        
       end  
   end   
     #first turn choose corner
