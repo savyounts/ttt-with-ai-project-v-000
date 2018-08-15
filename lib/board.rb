@@ -26,9 +26,9 @@ class Board
   end 
   
   def update(x, player)
-    index = x.to_i 
-    index -= 1
-    @cells[index] = player.token
+    # index = x.to_i 
+    # index -= 1
+    @cells[x.to_i - 1] = player.token
   end 
   
   def full?
