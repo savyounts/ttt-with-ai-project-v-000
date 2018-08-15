@@ -3,8 +3,9 @@ require 'pry'
 class Board 
   attr_accessor :cells
   
-  def initialize
+  def initialize(game)
     reset!
+    @game = game
   end
   
   def reset!
