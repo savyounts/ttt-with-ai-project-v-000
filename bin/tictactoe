@@ -31,7 +31,8 @@ elsif input == "2"
   Players::Human.new("0")
  end
  
- puts "
+ puts "Enter a number 1-9 to start:"
+ play
  
  
  
