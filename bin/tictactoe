@@ -32,7 +32,14 @@ elsif input == "2"
  end
  
  puts "Enter a number 1-9 to start:"
- play
+ Game.play
  
+ 
+ puts "Would you like to play again? Yes or No?"
+ answer = gets.strip 
+ if answer == "yes"
+   Game.start 
+  else 
+  end 
  
  
