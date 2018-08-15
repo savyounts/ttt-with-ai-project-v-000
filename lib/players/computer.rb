@@ -17,7 +17,6 @@ class Computer < Player
   
     
   def move(board)
-     case moves 
      if board.turn_count = 0 
        "4"
       else 
