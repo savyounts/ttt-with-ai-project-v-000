@@ -15,12 +15,12 @@ class Computer < Player
   [2,4,6]
   ]
   
-  def board
-    @board = Board.new 
-  end 
     
   def move(board)
-     ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample if win == nil  
+     case moves 
+     when board.turn_count = 0 
+       "4"
+      end  
   end   
     #first turn choose corner
     #second turn choose other corner
@@ -29,17 +29,17 @@ class Computer < Player
     #Fork: Create an opportunity where you can win in two ways.
     #Block Opponent's Fork:
     
-    def win
-      WIN_COMBINATIONS.each do |combo|
-        if board.cells[combo[0]] == token && board.cells[combo[0]] == board.cells[combo[1]] 
-            combo[2]
-        elsif board.cells[combo[0]] == token && board.cells[combo[0]] == board.cells[combo[2]]
-            combo[1]
-        elsif board.cells[combo[2]] == token && board.cells[combo[2]] == board.cells[combo[1]]
-            combo[0]
-        end
-      end
-    end 
+    # def win
+    #   WIN_COMBINATIONS.each do |combo|
+    #     if board.cells[combo[0]] == token && board.cells[combo[0]] == board.cells[combo[1]] 
+    #         combo[2]
+    #     elsif board.cells[combo[0]] == token && board.cells[combo[0]] == board.cells[combo[2]]
+    #         combo[1]
+    #     elsif board.cells[combo[2]] == token && board.cells[combo[2]] == board.cells[combo[1]]
+    #         combo[0]
+    #     end
+    #   end
+    # end 
 
     # def block 
     #   WIN_COMBINATIONS.each do |combo|
