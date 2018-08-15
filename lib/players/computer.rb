@@ -5,6 +5,7 @@ class Computer < Player
     ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
     #first turn choose corner
     #second turn choose other corner
+    #
     
     def best_move 
       board.cells.each do |cell|
