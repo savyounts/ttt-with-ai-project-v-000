@@ -18,8 +18,9 @@ class Computer < Player
     
   def move(board)
     @board = board
-     
-        ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample if win == nil
+     if win == nil 
+        ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
+    end
       
   end  
     #first turn choose corner
