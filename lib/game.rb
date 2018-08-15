@@ -86,7 +86,7 @@ class Game
       player_1 = Players::Human.new("0")
     end
  
-    puts "Enter a number 1-9 to start:"
+    
     game = Game.new(player_1, player_2)
     game.play 
   end 
