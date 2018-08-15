@@ -18,7 +18,7 @@ class Computer < Player
     
   def move(board)
     @board = board
-     if win == nil 
+     if win == W
         ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
     end
       
@@ -39,7 +39,6 @@ class Computer < Player
         elsif board.cells[combo[2]] == token && board.cells[combo[2]] == board.cells[combo[1]]
             combo[0]
         else 
-            nil
         end
       end
     end 
