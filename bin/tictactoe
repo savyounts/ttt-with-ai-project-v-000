@@ -10,6 +10,6 @@ game.start
  if answer == "yes"
    game.start 
   else 
-  end 
+end 
  
  
