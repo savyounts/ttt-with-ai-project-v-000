@@ -18,8 +18,10 @@ class Computer < Player
     
   def move(board)
     @board = board
-     if win == nil
-            ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
+    if board.none? {|c| c == "X" || c == "O"}
+      "5"
+     elsif win == nil
+      ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
     end
   end  
     
