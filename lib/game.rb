@@ -113,5 +113,5 @@ class Game
     puts "Current Board:"
     board.display
   end
- 
+ binding.pry
 end 
