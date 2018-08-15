@@ -52,7 +52,39 @@ class Game
   
   #managing game methods 
   def start 
-    
+    input = ""
+    puts "Welcome to Tic Tac Toe!"
+
+    until input == "0" || input == "1" || input == "2"
+      puts "How many players will there be, 0, 1 or 2?"
+      input = gets.strip
+    end
+
+    if input == "0"
+      player_1 = Players::Computer.new("X")
+      player_2 = Players::Computer.new("0")
+    elsif input == "1"
+      input_2 = ""
+      until input_2 == "1" || input_2 == "2"
+        puts "Enter 1 or 2 to decide if you want to go first or second."
+        input_2 = gets.strip
+      end 
+      if input_2 == "1"
+        player_1 = Players::Human.new("X")
+        player_2 = Players::Computer.new("O")
+      else 
+        player_1 = Players::Human.new("O")
+        player_2 = Players::Computer.new("X")
+      end
+    elsif input == "2"  
+      puts "Player 1 will be 'X'."
+      player_1 = Players::Human.new("X")
+      player_1 = Players::Human.new("0")
+    end
+ 
+    puts "Enter a number 1-9 to start:"
+    game = Game.new(player_1, player_2)
+    game.play 
   end 
   
   def play
