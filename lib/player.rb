@@ -1,9 +1,8 @@
 class Player 
-  attr_reader :token, :board 
+  attr_reader :token
   
-  def initialize(token, board)
+  def initialize(token)
     @token = token
-    @board = board
   end
   
 end 
