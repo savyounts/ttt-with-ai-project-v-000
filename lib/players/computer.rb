@@ -21,17 +21,23 @@ class Computer < Player
             combo[0]
         end
       end
+    end 
 
     def block 
       WIN_COMBINATIONS.each do |combo|
-        if board.cells[combo[0]] != computer.token &&  board.cells[combo[0]] == board.cells[combo[1]] 
+        if board.cells[combo[0]] != computer.token && board.cells[combo[0]] != " " &&  board.cells[combo[0]] == board.cells[combo[1]] 
             combo[2]
-        elsif board.cells[combo[0]] == computer.token && board.cells[combo[0]] == board.cells[combo[2]]
+        elsif board.cells[combo[0]] != computer.token && board.cells[combo[0]] != " " && board.cells[combo[0]] == board.cells[combo[2]]
             combo[1]
-        elsif board.cells[combo[2]] == computer.token && board.cells[combo[2]] == board.cells[combo[1]]
+        elsif board.cells[combo[2]] != computer.token && board.cells[combo[2]] != " " && board.cells[combo[2]] == board.cells[combo[1]]
             combo[0]
         end
       end
+    end
+    
+    def create_fork 
+      case 
+        when board.cells[
 
 
 end
