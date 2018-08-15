@@ -18,6 +18,7 @@ class Computer < Player
     
   def move(board)
      if game.board.turn_count = 0 
+       binding.pry 
        "4"
       else 
         ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
