@@ -55,22 +55,22 @@ class Computer < Player
       end
     end
     
-    # def create_fork 
-    #   case forks
-    #     when board.cells[0] == token && (board.cells[0] == board.cells[2] || board.cells[0] == board.cells[6])
-    #       "4"
-    #     when board.cells[8] == token && (board.cells[8] == board.cells[6] || board.cells[8] == board.cells[2])  
-    #       "4"
-    #     when board.cells[0] == token && board.cells[0] == board.cells[4] 
-    #       ["2", "6"].sample
-    #     when board.cells[8] == token && board.cells[8] == board.cells[4]  
-    #       ["2", "6"].sample
-    #     when board.cells[2] == token && board.cells[4] == board.cells[2]
-    #       ["0", "8"].sample
-    #     when board.cells[4] == token && board.cells[4] == board.cells[6]
-    #       ["0", "8"].sample
-    #   end
-    # end
+    def create_fork 
+      case forks
+        when board.cells[0] == token && (board.cells[0] == board.cells[2] || board.cells[0] == board.cells[6])
+          "4"
+        when board.cells[8] == token && (board.cells[8] == board.cells[6] || board.cells[8] == board.cells[2])  
+          "4"
+        when board.cells[0] == token && board.cells[0] == board.cells[4] 
+          ["2", "6"].sample
+        when board.cells[8] == token && board.cells[8] == board.cells[4]  
+          ["2", "6"].sample
+        when board.cells[2] == token && board.cells[4] == board.cells[2]
+          ["0", "8"].sample
+        when board.cells[4] == token && board.cells[4] == board.cells[6]
+          ["0", "8"].sample
+      end
+    end
     
     # def defend_fork
     #   case opponent_forks
