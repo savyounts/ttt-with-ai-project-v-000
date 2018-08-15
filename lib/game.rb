@@ -18,7 +18,6 @@ class Game
     @board = board
     @player_1 = player_1
     @player_2 = player_2
-    player_1.game = self 
   end 
   
   #state of game methods
