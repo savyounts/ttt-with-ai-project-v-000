@@ -84,9 +84,9 @@ class Game
       puts "Player 1 will be 'X'."
       player_1 = Players::Human.new("X")
       player_1 = Players::Human.new("0")
-       binding.pry
+      
     end
- 
+  binding.pry
     
     game = Game.new(player_1, player_2)
     game.play 
