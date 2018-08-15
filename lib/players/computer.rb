@@ -21,10 +21,8 @@ class Computer < Player
      if win == nil
        if block == nil
          if create_fork == nil
-           if defend_fork == nil
             ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
-          else 
-            nil
+          
           end 
         end 
       end 
