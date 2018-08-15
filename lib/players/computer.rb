@@ -6,7 +6,8 @@ class Computer < Player
     #first turn choose corner
     #second turn choose other corner
     
-    if board.turn_count
+    def best_move 
+      board.cells.
   end
 end 
 end
