@@ -37,10 +37,13 @@ class Board
  
  def turn_count
     count = 0 
-    @cells.each {|c| count += 1 if c == "X" || c == "O"}
+    @cells.each do |c| 
+      if c == "X" || c == "O"
+        count += 1 
+      end 
+    end
     binding.pry
     count
-    
   end
  
  def taken?(x) 
