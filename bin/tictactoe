@@ -10,8 +10,8 @@ until input == "0" || input == "1" || input == "2"
 end
 
 if input == "0"
-  Players::Computer.new("X")
-  Players::Computer.new("0")
+  player_1 = Players::Computer.new("X")
+  player_2 = Players::Computer.new("0")
  elsif input == "1"
   input_2 = ""
   until input_2 == "1" || input_2 == "2"
@@ -19,20 +19,21 @@ if input == "0"
     input_2 = gets.strip
   end 
   if input_2 == "1"
-    Players::Human.new("X")
-    Players::Computer.new("O")
+    player_1 = Players::Human.new("X")
+     player_2 = Players::Computer.new("O")
   else 
-    Players::Human.new("O")
-    Players::Computer.new("X")
+    player_1 = Players::Human.new("O")
+    player_2 = Players::Computer.new("X")
   end
 elsif input == "2"  
   puts "Player 1 will be 'X'."
-  Players::Human.new("X")
-  Players::Human.new("0")
+  player_1 = Players::Human.new("X")
+  player_1 = Players::Human.new("0")
  end
  
  puts "Enter a number 1-9 to start:"
- game.play
+ game = Game.new(player_1, player_2)
+ game.play 
  
  
  puts "Would you like to play again? Yes or No?"
