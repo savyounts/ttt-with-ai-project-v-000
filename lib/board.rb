@@ -3,6 +3,8 @@ class Board
   
   def initialize (player_1, player_2)
     reset!
+    @player_1= player_1
+    @player_2 = player_2
   end
   
   def reset!
