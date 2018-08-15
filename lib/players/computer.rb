@@ -1,5 +1,5 @@
 module Players
-class Players::Computer
+class Computer
   
   def move(board)
     (1..9).sample.to_s
