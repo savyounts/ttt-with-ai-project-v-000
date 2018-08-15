@@ -18,11 +18,11 @@ class Computer < Player
     
     def win  
       WIN_COMBINATIONS.each do |combo|
-        if board.cells[combo[0]] == computer.token && board.cells[combo[0]] == board.cells[combo[1]] 
+        if board.cells[combo[0]] == token && board.cells[combo[0]] == board.cells[combo[1]] 
             combo[2]
-        elsif board.cells[combo[0]] == computer.token && board.cells[combo[0]] == board.cells[combo[2]]
+        elsif board.cells[combo[0]] == token && board.cells[combo[0]] == board.cells[combo[2]]
             combo[1]
-        elsif board.cells[combo[2]] == computer.token && board.cells[combo[2]] == board.cells[combo[1]]
+        elsif board.cells[combo[2]] == token && board.cells[combo[2]] == board.cells[combo[1]]
             combo[0]
         end
       end
@@ -30,11 +30,11 @@ class Computer < Player
 
     def block 
       WIN_COMBINATIONS.each do |combo|
-        if board.cells[combo[0]] != computer.token && board.cells[combo[0]] != " " &&  board.cells[combo[0]] == board.cells[combo[1]] 
+        if board.cells[combo[0]] != token && board.cells[combo[0]] != " " &&  board.cells[combo[0]] == board.cells[combo[1]] 
             combo[2]
-        elsif board.cells[combo[0]] != computer.token && board.cells[combo[0]] != " " && board.cells[combo[0]] == board.cells[combo[2]]
+        elsif board.cells[combo[0]] != token && board.cells[combo[0]] != " " && board.cells[combo[0]] == board.cells[combo[2]]
             combo[1]
-        elsif board.cells[combo[2]] != computer.token && board.cells[combo[2]] != " " && board.cells[combo[2]] == board.cells[combo[1]]
+        elsif board.cells[combo[2]] != token && board.cells[combo[2]] != " " && board.cells[combo[2]] == board.cells[combo[1]]
             combo[0]
         end
       end
@@ -44,23 +44,24 @@ class Computer < Player
       case forks
         when board.cells[0] == token && (board.cells[0] == board.cells[2] || board.cells[0] == board.cells[6])
            "4"
-        when board.cells[8] == player.token && (board.cells[8] == board.cells[6] || board.cells[8] == board.cells[2])  "4"
-        when board.cells[0] == player.token && board.cells[0] == board.cells[4] 
+        when board.cells[8] == token && (board.cells[8] == board.cells[6] || board.cells[8] == board.cells[2])  
+          "4"
+        when board.cells[0] == token && board.cells[0] == board.cells[4] 
           ["2", "6"].sample
-        when board.cells[8] == player.token && board.cells[8] == board.cells[4]  
+        when board.cells[8] == token && board.cells[8] == board.cells[4]  
           ["2", "6"].sample
-        when board.cells[2] == player.token && board.cells[4] == board.cells[2]
+        when board.cells[2] == token && board.cells[4] == board.cells[2]
           ["0", "8"].sample
-        when board.cells[4] == player.token && board.cells[4] == board.cells[6]
+        when board.cells[4] == token && board.cells[4] == board.cells[6]
           ["0", "8"].sample
       end
     end
     
     def defend_fork
       case opponent_forks
-        when (board.cells[0] != player.token || board.cells[0] != " ") && (board.cells[0] == board.cells[2] || board.cells[0] == board.cells[6])
+        when (board.cells[0] != token || board.cells[0] != " ") && (board.cells[0] == board.cells[2] || board.cells[0] == board.cells[6])
            "4"
-        when (board.cells[8] != player.token || board.cells[0] != " ") && (board.cells[8] == board.cells[6] || board.cells[8] == board.cells[2])  
+        when (board.cells[8] != token || board.cells[0] != " ") && (board.cells[8] == board.cells[6] || board.cells[8] == board.cells[2])  
           "4"
         when (board.cells[0] != player.token || board.cells[0] != " ") && board.cells[0] == board.cells[4] 
           ["2", "6"].sample
