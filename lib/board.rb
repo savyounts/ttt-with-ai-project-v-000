@@ -39,6 +39,7 @@ class Board
     count = 0 
     @cells.each {|c| count += 1 if c == "X" || c == "O"}
     count
+    binding.pry
   end
  
  def taken?(x) 
