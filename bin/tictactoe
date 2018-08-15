@@ -5,12 +5,13 @@ game = Game.new
 game.start
 
 answer = ""
- until answer = "no"
+ until answer = "no" || answer == "yes"
  puts "Would you like to play again? Yes or No?"
  answer = gets.strip 
  if answer == "yes"
    game.start 
   else 
+end 
 end 
  
  
