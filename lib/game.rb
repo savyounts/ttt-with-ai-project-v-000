@@ -74,6 +74,7 @@ class Game
    else
      turn 
    end
+    puts "Current Board:"
     board.display
   end
  
