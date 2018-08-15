@@ -81,7 +81,7 @@ class Game
       @player_1 = Players::Human.new("X")
       @player_2 = Players::Human.new("0")
     end
-    game.play 
+    self.play 
   end 
   
   def play
