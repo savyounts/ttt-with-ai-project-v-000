@@ -1,6 +1,8 @@
+require 'pry'
+
 module Players
 class Computer < Player
-  
+  binding.pry
   def move(board)
     win
     block 
