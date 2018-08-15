@@ -83,8 +83,6 @@ class Game
     end
 
     game = Game.new(player_1, player_2)
-    game.player_1.game = self 
-    game.player_2.game = self
     game.play 
   end 
   
