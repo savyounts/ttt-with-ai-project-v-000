@@ -21,8 +21,9 @@ class Computer < Player
        "4"
       else 
         ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
+        binding.pry
       end 
-      binding.pry 
+     
   end   
     #first turn choose corner
     #second turn choose other corner
