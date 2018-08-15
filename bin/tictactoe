@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
+require_relative '../config/environment'
+
 game = Game.new
 game.start
-require_relative '../config/environment'
 
  
  puts "Would you like to play again? Yes or No?"
