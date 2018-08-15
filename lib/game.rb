@@ -74,6 +74,7 @@ class Game
    else
      turn 
    end
+    board.display
   end
  
 end 
