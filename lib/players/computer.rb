@@ -3,10 +3,7 @@ require 'pry'
 module Players
 class Computer < Player
   def move(board)
-    win
-    block 
-    create_fork 
-    defend_fork 
+    win || block || create_fork || defend_fork 
   end   
     #first turn choose corner
     #second turn choose other corner
