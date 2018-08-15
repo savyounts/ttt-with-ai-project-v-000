@@ -19,9 +19,10 @@ class Computer < Player
   def move(board)
     @board = board
      if win == nil
+       block 
+      elsif block == nil 
         ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
     end
-      
   end  
     #first turn choose corner
     #second turn choose other corner
@@ -42,17 +43,17 @@ class Computer < Player
       end
     end 
 
-    # def block 
-    #   WIN_COMBINATIONS.each do |combo|
-    #     if board.cells[combo[0]] != token && board.cells[combo[0]] != " " &&  board.cells[combo[0]] == board.cells[combo[1]] 
-    #         combo[2]
-    #     elsif board.cells[combo[0]] != token && board.cells[combo[0]] != " " && board.cells[combo[0]] == board.cells[combo[2]]
-    #         combo[1]
-    #     elsif board.cells[combo[2]] != token && board.cells[combo[2]] != " " && board.cells[combo[2]] == board.cells[combo[1]]
-    #         combo[0]
-    #     end
-    #   end
-    # end
+    def block 
+      WIN_COMBINATIONS.each do |combo|
+        if board.cells[combo[0]] != token && board.cells[combo[0]] != " " &&  board.cells[combo[0]] == board.cells[combo[1]] 
+            combo[2]
+        elsif board.cells[combo[0]] != token && board.cells[combo[0]] != " " && board.cells[combo[0]] == board.cells[combo[2]]
+            combo[1]
+        elsif board.cells[combo[2]] != token && board.cells[combo[2]] != " " && board.cells[combo[2]] == board.cells[combo[1]]
+            combo[0]
+        end
+      end
+    end
     
     # def create_fork 
     #   case forks
