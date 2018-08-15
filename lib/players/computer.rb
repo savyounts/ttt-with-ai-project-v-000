@@ -14,14 +14,7 @@ class Computer < Player
   [2,4,6]
   ]
   def move(board)
-    case choices
-      when win == nil 
-        block 
-      when block == nil 
-        create_fork 
-      when create_fork == nil 
-        defend_fork 
-      end  
+      
   end   
     #first turn choose corner
     #second turn choose other corner
