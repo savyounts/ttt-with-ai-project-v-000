@@ -19,11 +19,12 @@ if input == "0"
     input_2 = gets.strip
   end 
   if input_2 == "1"
-  Players::Human.new("X")
-  Players::Computer.new("O")
+    Players::Human.new("X")
+    Players::Computer.new("O")
   else 
-  Players::Human.new("O")
-  Players::Computer.new("X")
+    Players::Human.new("O")
+    Players::Computer.new("X")
+  end
 elsif input == "2"  
   puts "Player 1 will be 'X'."
   Players::Human.new("X")
