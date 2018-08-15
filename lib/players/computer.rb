@@ -17,11 +17,9 @@ class Computer < Player
   
     
   def move(board)
-     if game.board.turn_count = 0 
-       "4"
-      else 
+     
         ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
-      end 
+      
   end  
     #first turn choose corner
     #second turn choose other corner
