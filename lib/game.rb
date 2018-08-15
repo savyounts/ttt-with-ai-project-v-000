@@ -25,7 +25,7 @@ class Game
   end 
   
   def won?
-    WIN_COMBINATIONS.detect {|combo| board.cells[combo[0]] == board.cells[combo[1]] && board.cells[combo[1]] == board.cells[combo[2]] && position_taken?(combo[0]) }
+    WIN_COMBINATIONS.detect {|combo| board.cells[combo[0]] == board.cells[combo[1]] && board.cells[combo[1]] == board.cells[combo[2]] && position(combo[0]) }
   end 
   
   def draw?
