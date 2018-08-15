@@ -1,3 +1,5 @@
+require 'pry'
+
 class Game 
   attr_accessor :board, :player_1, :player_2
   attr_reader 
@@ -25,7 +27,10 @@ class Game
   end 
   
   def won?
-    WIN_COMBINATIONS.detect {|combo| board.cells[combo[0]] == board.cells[combo[1]] && board.cells[combo[1]] == board.cells[combo[2]] && board.taken?(combo[0] + 1) }
+    WIN_COMBINATIONS.detect do |combo| 
+      board.cells[combo[0]] == board.cells[combo[1]] && board.cells[combo[1]] == board.cells[combo[2]] && board.taken?(combo[0] + 1) 
+      binding.pry
+    end
   end 
   
   def draw?
