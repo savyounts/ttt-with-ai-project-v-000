@@ -4,7 +4,7 @@ class Computer < Player
   def move(board)
     win
     block 
-    fork 
+    create_fork 
     defend_fork 
   end   
     #first turn choose corner
