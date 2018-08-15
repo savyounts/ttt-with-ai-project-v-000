@@ -15,8 +15,8 @@ class Computer < Player
   [2,4,6]
   ]
   
-  def board=(board=[])
-    @board = board
+  def board
+    @board = Board.new 
   end 
     
   def move(board)
