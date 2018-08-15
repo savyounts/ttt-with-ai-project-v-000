@@ -58,7 +58,8 @@ class Computer < Player
       case opponent_forks
         when (board.cells[0] != player.token || board.cells[0] != " ") && (board.cells[0] == board.cells[2] || board.cells[0] == board.cells[6])
            "4"
-        when (board.cells[8] != player.token || board.cells[0] != " ") && (board.cells[8] == board.cells[6] || board.cells[8] == board.cells[2])  "4"
+        when (board.cells[8] != player.token || board.cells[0] != " ") && (board.cells[8] == board.cells[6] || board.cells[8] == board.cells[2])  
+          "4"
         when (board.cells[0] != player.token || board.cells[0] != " ") && board.cells[0] == board.cells[4] 
           ["2", "6"].sample
         when (board.cells[8] != player.token || board.cells[0] != " ") && board.cells[8] == board.cells[4]  
