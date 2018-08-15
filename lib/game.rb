@@ -2,7 +2,6 @@ require 'pry'
 
 class Game 
   attr_accessor :board, :player_1, :player_2
-  attr_reader 
   
   WIN_COMBINATIONS = [
   [0,1,2],
@@ -62,7 +61,7 @@ class Game
 
     if input == "0"
       @player_1 = Players::Computer.new("X")
-      @player_2 = Players::Computer.new("0")
+      @player_2 = Players::Computer.new("O")
     elsif input == "1"
       input_2 = ""
       until input_2 == "1" || input_2 == "2"
@@ -79,7 +78,7 @@ class Game
     elsif input == "2"  
       puts "Player 1 will be 'X'."
       @player_1 = Players::Human.new("X")
-      @player_2 = Players::Human.new("0")
+      @player_2 = Players::Human.new("O")
     end
     self.play 
   end 
