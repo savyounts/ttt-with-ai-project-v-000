@@ -42,7 +42,6 @@ class Board
         count += 1 
       end 
     end
-    binding.pry
     count
   end
  
