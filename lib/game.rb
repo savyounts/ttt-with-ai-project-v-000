@@ -62,6 +62,8 @@ class Game
     if input == "0"
       @player_1 = Players::Computer.new("X")
       @player_2 = Players::Computer.new("O")
+      player_1.game = self
+      player_2.game = self
     elsif input == "1"
       input_2 = ""
       until input_2 == "1" || input_2 == "2"
@@ -71,9 +73,11 @@ class Game
       if input_2 == "1"
         @player_1 = Players::Human.new("X")
         @player_2 = Players::Computer.new("O")
+        player_2.game = self
       else 
         @player_1 = Players::Human.new("O")
         @player_2 = Players::Computer.new("X")
+        player_2.game = self
       end
     elsif input == "2"  
       puts "Player 1 will be 'X'."
