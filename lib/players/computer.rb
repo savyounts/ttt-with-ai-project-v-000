@@ -16,6 +16,7 @@ class Computer < Player
   ]
   
   def move(board)
+    binding.pry
     @board = board 
     if board.cells == [" ", " ", " ", " ", " ", " ", " ", " ", " "]
       "5"
