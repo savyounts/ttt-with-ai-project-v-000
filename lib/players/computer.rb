@@ -18,9 +18,7 @@ class Computer < Player
   def move(board)
     if board.cells == [" ", " ", " ", " ", " ", " ", " ", " ", " "]
       "5"
-    elsif win   
-      
-    else 
+    elsif win  == nil 
       ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
     end
   end  
