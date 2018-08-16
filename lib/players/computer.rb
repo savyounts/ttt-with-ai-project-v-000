@@ -7,8 +7,6 @@ class Computer < Player
   def move(board)
     if board.cells[4] == " "
       "5"
-    elsif board.turn_count = 1 && board.cells[4] != " "
-      ["1", "3", "7", "9"].sample
     else 
     ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
     end 
