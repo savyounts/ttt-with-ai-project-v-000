@@ -16,7 +16,7 @@ class Computer < Player
   ]
   
   def move(board)
-    if game.board.cells == [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+    if self.game.board.cells == [" ", " ", " ", " ", " ", " ", " ", " ", " "]
       "5"
       
     else 
