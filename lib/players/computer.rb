@@ -18,8 +18,8 @@ class Computer < Player
     if board.cells[4] == " "
       "5"
     elsif board.cells[4] != " "
-      
-    elsif win(board) == nil
+      ["1", "3", "7", "9"].sample
+    elsif 
        block
     elsif board.cells[3] == board.cells[0]  
     else 
