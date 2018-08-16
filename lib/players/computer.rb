@@ -18,8 +18,8 @@ class Computer < Player
     if board.cells[4] == " "
       "5"
     elsif board.cells[4] != " "
-      win
-    elsif win == nil
+      win(board)
+    elsif win(board) == nil
        block
     elsif board.cells[3] == board.cells[0]  
     else 
