@@ -73,8 +73,8 @@ class Game
         @player_2 = Players::Computer.new("O")
         p
       else 
-        @player_1 = Players::Human.new("O")
-        @player_2 = Players::Computer.new("X")
+        @player_2 = Players::Human.new("O")
+        @player_1 = Players::Computer.new("X")
         
       end
     elsif input == "2"  
