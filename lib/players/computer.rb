@@ -43,7 +43,7 @@ class Computer < Player
     def block 
       WIN_COMBINATIONS.detect do |combo|
         if board.cells[combo[0]] != token && board.cells[combo[0]] != " " &&  board.cells[combo[0]] == board.cells[combo[1]] 
-            combo[2].to_s
+            combo[2].join
         elsif board.cells[combo[0]] != token && board.cells[combo[0]] != " " && board.cells[combo[0]] == board.cells[combo[2]]
             combo[1].to_s
         elsif board.cells[combo[2]] != token && board.cells[combo[2]] != " " && board.cells[combo[2]] == board.cells[combo[1]]
