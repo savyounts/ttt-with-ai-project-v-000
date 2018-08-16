@@ -116,7 +116,6 @@ class Game
      turn 
    end
     puts "Current Board:"
-    board.display
   end
 
 end 
