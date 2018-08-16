@@ -3,6 +3,19 @@ require 'pry'
 module Players
 class Computer < Player
   
+  
+  def move(board)
+    if board.cells[4] == " "
+      "5"
+    elsif board.cells[4] != " "
+      ["1", "3", "7", "9"].sample
+    else 
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
+    end 
+  end 
+  
+  
+  
   # WIN_COMBINATIONS = [
   # [0,1,2],
   # [3,4,5],
@@ -13,18 +26,6 @@ class Computer < Player
   # [0,4,8],
   # [2,4,6]
   # ]
-  
-  def move(board)
-    if board.cells[4] == " "
-      "5"
-    elsif board.cells[4] != " "
-      ["1", "3", "7", "9"].sample
-    elsif 
-       block
-    else 
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
-    end 
-  end  
     
     # def win(board)
     #   WIN_COMBINATIONS.detect do |combo|
