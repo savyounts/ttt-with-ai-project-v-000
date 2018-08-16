@@ -21,9 +21,7 @@ class Computer < Player
       ["1", "3", "7", "9"].sample
     elsif 
        block
-    elsif board.cells[3] == board.cells[0]  
     else 
-      
     ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
     end 
   end  
