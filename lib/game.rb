@@ -83,7 +83,15 @@ class Game
       @player_2 = Players::Human.new("O")
     end
     self.play 
-    
+    answer = ""
+    until answer = "no" || answer == "yes"
+      puts "Would you like to play again? Yes or No?"
+      answer = gets.strip 
+      if answer == "yes"
+        game.start 
+      else 
+      end 
+    end 
   end 
   
   def play
