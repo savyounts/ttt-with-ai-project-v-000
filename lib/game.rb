@@ -83,6 +83,7 @@ class Game
       @player_2 = Players::Human.new("O")
     end
     self.play 
+    
   end 
   
   def play
