@@ -18,9 +18,9 @@ class Computer < Player
     if board.cells[4] == " "
       "5"
     elsif board.cells[4] != " "
-      ["1", "3", '7', "9"].sample
-    elsif win
-       
+      win
+    elsif win == nil
+       block
     elsif board.cells[3] == board.cells[0]  
     else 
       
@@ -28,29 +28,29 @@ class Computer < Player
     end 
   end  
     
-    # def win
-    #   WIN_COMBINATIONS.detect do |combo|
-    #     if board.cells[combo[0]] == token && board.cells[combo[0]] == board.cells[combo[1]] 
-    #         combo[2]
-    #     elsif board.cells[combo[0]] == token && board.cells[combo[0]] == board.cells[combo[2]]
-    #         combo[1]
-    #     elsif board.cells[combo[2]] == token && board.cells[combo[2]] == board.cells[combo[1]]
-    #         combo[0]
-    #     end
-    #   end
-    # end 
+    def win
+      WIN_COMBINATIONS.detect do |combo|
+        if board.cells[combo[0]] == token && board.cells[combo[0]] == board.cells[combo[1]] 
+            combo[2]
+        elsif board.cells[combo[0]] == token && board.cells[combo[0]] == board.cells[combo[2]]
+            combo[1]
+        elsif board.cells[combo[2]] == token && board.cells[combo[2]] == board.cells[combo[1]]
+            combo[0]
+        end
+      end
+    end 
 
-    # def block 
-    #   WIN_COMBINATIONS.detect do |combo|
-    #     if board.cells[combo[0]] != token && board.cells[combo[0]] != " " &&  board.cells[combo[0]] == board.cells[combo[1]] 
-    #         combo[2]
-    #     elsif board.cells[combo[0]] != token && board.cells[combo[0]] != " " && board.cells[combo[0]] == board.cells[combo[2]]
-    #         combo[1]
-    #     elsif board.cells[combo[2]] != token && board.cells[combo[2]] != " " && board.cells[combo[2]] == board.cells[combo[1]]
-    #         combo[0]
-    #     end
-    #   end
-    # end
+    def block 
+      WIN_COMBINATIONS.detect do |combo|
+        if board.cells[combo[0]] != token && board.cells[combo[0]] != " " &&  board.cells[combo[0]] == board.cells[combo[1]] 
+            combo[2]
+        elsif board.cells[combo[0]] != token && board.cells[combo[0]] != " " && board.cells[combo[0]] == board.cells[combo[2]]
+            combo[1]
+        elsif board.cells[combo[2]] != token && board.cells[combo[2]] != " " && board.cells[combo[2]] == board.cells[combo[1]]
+            combo[0]
+        end
+      end
+    end
     
     # def create_fork 
     #     if board.cells[0] == token && (board.cells[0] == board.cells[2] || board.cells[0] == board.cells[6])
