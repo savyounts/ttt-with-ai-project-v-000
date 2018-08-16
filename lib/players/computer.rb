@@ -19,16 +19,13 @@ class Computer < Player
       "5"
     elsif board.cells[4] != " "
       ["1", "3", '7', "9"].sample
-    elsif board.cells[]   
+    elsif win
+       
+    elsif board.cells[3] == board.cells[0]  
     else 
       
     ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
-  end 
-    # if board.cells == [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-    #   "5"
-    # elsif win  == nil 
-    #   ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
-    # end
+    end 
   end  
     
     # def win
