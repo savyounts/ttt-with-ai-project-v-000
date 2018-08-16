@@ -2,7 +2,6 @@ require 'pry'
 
 module Players
 class Computer < Player
-  attr_accessor :game, :board
   
    WIN_COMBINATIONS = [
   [0,1,2],
