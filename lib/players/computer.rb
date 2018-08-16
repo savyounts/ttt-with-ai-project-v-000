@@ -28,7 +28,7 @@ class Computer < Player
     end 
   end  
     
-    def win
+    def win(board)
       WIN_COMBINATIONS.detect do |combo|
         if board.cells[combo[0]] == board.cells[combo[1]] 
             combo[2]
