@@ -2,7 +2,7 @@ require 'pry'
 
 module Players
 class Computer < Player
-  attr_accessor :game
+  attr_accessor :game, :board
   
    WIN_COMBINATIONS = [
   [0,1,2],
@@ -16,6 +16,7 @@ class Computer < Player
   ]
   
   def move(board)
+    @board = board 
     if board.cells == [" ", " ", " ", " ", " ", " ", " ", " ", " "]
       "5"
     elsif win  == nil 
