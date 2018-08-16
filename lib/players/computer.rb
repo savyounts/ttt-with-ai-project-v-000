@@ -16,9 +16,9 @@ class Computer < Player
   ]
   
   def move(board)
-    if self.game.board == [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+    if board[4] == " "
       "5"
-      
+    elsif   
     else 
       ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
     end
