@@ -31,11 +31,11 @@ class Computer < Player
     def win(board)
       WIN_COMBINATIONS.detect do |combo|
         if board.cells[combo[0]] == board.cells[combo[1]] 
-            combo[2].to_s
+            combo[2].join
         elsif board.cells[combo[0]] == board.cells[combo[2]]
-            combo[1].to_s
+            combo[1].join
         elsif board.cells[combo[2]] == board.cells[combo[1]]
-            combo[0].to_s
+            combo[0].join
         end
       end
     end 
@@ -45,9 +45,9 @@ class Computer < Player
         if board.cells[combo[0]] != token && board.cells[combo[0]] != " " &&  board.cells[combo[0]] == board.cells[combo[1]] 
             combo[2].join
         elsif board.cells[combo[0]] != token && board.cells[combo[0]] != " " && board.cells[combo[0]] == board.cells[combo[2]]
-            combo[1].to_s
+            combo[1].join
         elsif board.cells[combo[2]] != token && board.cells[combo[2]] != " " && board.cells[combo[2]] == board.cells[combo[1]]
-            combo[0].to_s
+            combo[0].join
         end
       end
     end
