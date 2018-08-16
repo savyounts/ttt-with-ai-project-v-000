@@ -26,7 +26,7 @@ class Computer < Player
     
     def win
       WIN_COMBINATIONS.detect do |combo|
-        if board.cells[combo[0]] == token && board.cells[combo[0]] == board.cells[combo[1]] 
+        if board[combo[0]] == token && board[combo[0]] == board[combo[1]] 
             combo[2]
         elsif board.cells[combo[0]] == token && board.cells[combo[0]] == board.cells[combo[2]]
             combo[1]
