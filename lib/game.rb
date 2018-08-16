@@ -107,6 +107,7 @@ class Game
   
   def turn 
    puts "Please enter 1-9:"
+   board.display
    player = current_player
    p_input = player.move(board)
    if board.valid_move?(p_input)
